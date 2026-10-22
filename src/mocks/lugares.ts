@@ -1,0 +1,50 @@
+import type { Lugar } from "@/tipos";
+
+export const lugaresMock: Lugar[] = [
+  {
+    id: "lug-004",
+    nombre: "Molino Forclaz",
+    categoriaId: "cat-museos",
+    descripcionCorta: "Molino de viento de 1888 levantado por colonos suizos.",
+    descripcion: "Construido en 1888 por Juan Bautista Forclaz...",
+    coordenadas: { latitud: -32.1904, longitud: -58.1932 },
+    direccion: "Colonia San José, Ruta Provincial 26",
+    imagenes: ["https://picsum.photos/seed/molino/800/500"],
+    horarios: [
+      { dia: 2, abre: "09:00", cierra: "19:00" },
+      { dia: 6, abre: "10:00", cierra: "20:00" },
+    ],
+    telefono: "345-4421234",
+    sitioWeb: null,
+    precioEntrada: 1500,
+    audioguia: {
+      url: "https://example.com/molino-es.m4a",
+      duracionSegundos: 252,
+      idioma: "es",
+    },
+    codigoQr: "COLON:lug-004",
+    accesible: false,
+    activo: true,
+    actualizadoEn: "2026-08-01T10:30:00-03:00",
+  },
+  {
+    // caso feo: sin audioguía, sin teléfono, sin precio, sin fotos
+    id: "lug-005",
+    nombre: "Playa Paso Vela",
+    categoriaId: "cat-playas",
+    descripcionCorta: "Playa sobre el río Uruguay.",
+    descripcion: "Playa de arena con servicios.",
+    coordenadas: { latitud: -32.2229, longitud: -58.1397 },
+    direccion: "Costanera",
+    imagenes: [],
+    horarios: [],
+    telefono: null,
+    sitioWeb: null,
+    precioEntrada: null,
+    audioguia: null,
+    codigoQr: null,
+    accesible: true,
+    activo: true,
+    actualizadoEn: "2026-08-01T10:30:00-03:00",
+  },
+];

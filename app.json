@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "mi-ciudad",
-    "slug": "mi-ciudad",
+    "name": "temp-app",
+    "slug": "temp-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "miciudad",
+    "scheme": "tempapp",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
@@ -38,8 +38,8 @@
       "expo-secure-store",
       "expo-audio",
       "expo-video",
-      "@react-native-vector-icons/ionicons",
-      "expo-asset"
+      "expo-asset",
+      "@react-native-vector-icons/ionicons"
     ],
     "experiments": {
       "typedRoutes": true,

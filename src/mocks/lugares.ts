@@ -1,0 +1,76 @@
+import type { Lugar } from "@/tipos";
+
+export const lugaresMock: Lugar[] = [
+  {
+    // caso bueno
+    id: "lug-004",
+    nombre: "Molino Forclaz",
+    categoriaId: "cat-museos",
+    descripcionCorta: "Molino de viento de 1888 levantado por colonos suizos.",
+    descripcion: "Construido en 1888 por Juan Bautista Forclaz, uno de los colonos suizos de la zona.",
+    coordenadas: { latitud: -32.1904, longitud: -58.1932 },
+    direccion: "Colonia San José, Ruta Provincial 26",
+    imagenes: ["https://picsum.photos/seed/molino/800/500"],
+    horarios: [
+      { dia: 2, abre: "09:00", cierra: "19:00" },
+      { dia: 6, abre: "10:00", cierra: "20:00" },
+    ],
+    telefono: "345-4421234",
+    sitioWeb: null,
+    precioEntrada: 1500,
+    audioguia: {
+      url: "https://example.com/molino-es.m4a",
+      duracionSegundos: 252,
+      idioma: "es",
+    },
+    codigoQr: "COLON:lug-004",
+    accesible: false,
+    activo: true,
+    actualizadoEn: "2026-08-01T10:30:00-03:00",
+  },
+  {
+    // caso malo: sin audioguia, sin teléfono, sin precio, sin fotos, sin horarios
+    id: "lug-005",
+    nombre: "Playa Paso Vela",
+    categoriaId: "cat-playas",
+    descripcionCorta: "Playa sobre el río Uruguay.",
+    descripcion: "Playa de arena con servicios.",
+    coordenadas: { latitud: -32.2229, longitud: -58.1397 },
+    direccion: "Costanera",
+    imagenes: [],
+    horarios: [],
+    telefono: null,
+    sitioWeb: null,
+    precioEntrada: null,
+    audioguia: null,
+    codigoQr: null,
+    accesible: true,
+    activo: true,
+    actualizadoEn: "2026-08-01T10:30:00-03:00",
+  },
+  {
+    // caso malo: texto largo que rompe el diseño, y entrada gratis
+    id: "lug-006",
+    nombre: "Termas de Colón con un nombre exageradamente largo para probar el diseño",
+    categoriaId: "cat-termas",
+    descripcionCorta:
+      "Complejo termal con piletas de distintas temperaturas, servicios de gastronomía, spa y alojamiento para toda la familia en pleno centro de la ciudad.",
+    descripcion: "Aguas termales a cielo abierto. ".repeat(40),
+    coordenadas: { latitud: -32.2234, longitud: -58.1433 },
+    direccion: "Av. Quirós y Tomás Zorrilla",
+    imagenes: ["https://picsum.photos/seed/termas/800/500"],
+    horarios: [
+      { dia: 0, abre: "09:00", cierra: "21:00" },
+      { dia: 1, abre: "09:00", cierra: "21:00" },
+      { dia: 3, abre: "09:00", cierra: "21:00" },
+    ],
+    telefono: null,
+    sitioWeb: "https://example.com/termas",
+    precioEntrada: 0,
+    audioguia: null,
+    codigoQr: "COLON:lug-006",
+    accesible: true,
+    activo: true,
+    actualizadoEn: "2026-08-01T10:30:00-03:00",
+  },
+];
